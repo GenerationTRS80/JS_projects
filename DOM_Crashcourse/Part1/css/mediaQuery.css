@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  /* background-color: bisque; */
+ 
+}
+
+header {
+  /* border: 10px solid rgb(153, 182, 26); */
+  background-color:#000000;
+  /* z-index: 10; */
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  /* NOTE: The border-style writes the border line */
+  background-color: none;
+  height: 90px;
+}
+
+header nav{ 
+  /* border: 0.4em solid blue; */
+  width: 80%;
+  margin: auto;
+}
+
+nav ul {
+  /* border: 3px solid gray; */
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block; /* -block allows you to set height and width */
+  height: 50px;
+  background-image: url("http://placekitten.com/g/40/40");
+  background-repeat: no-repeat;
+  line-height: 30px;
+  font-size: 40px;
+  padding-left: 50px;
+  margin: 0px 50px;
+}
+
+li a {
+  color: blueviolet;
+  font-size: 30px;
+  padding-bottom: 0px;
+  margin-left: 10px;
+}
+
+/*   //////////    BODY    \\\\\\\\\\\\\\\\\  */
+
+#hero-block {
+  border: 10px solid rgb(145, 26, 119);
+  width: 100%;
+  background-color: #99ccee;
+  padding: 10px 0 0 0;
+  overflow: auto;
+}
+
+/* CSS Icon */
+.container {
+  border: 0.3em solid #b81d1d;
+  height: 300px;
+}
+
+#banner-text {
+  border: 3px solid greenyellow;
+  margin-right: 30%;
+  text-align: center;
+  font-size: 3em;
+}
+
+#side-text {
+  border: 0.12em solid rgba(0, 188, 217, 0.8);
+  width: 800px;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-left: 10%;
+  /* margin-right: 20%; */
+}
+
+#css-image {
+  width: 300px;
+  height: 300px;
+  float: right;
+  margin-right: 3%;
+}
+
+/* Text Box */
+#module-blocks {
+  border: 0.5em solid red;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.box {
+  border: 0.5em solid black;
+  background-color: #99ccee;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1.2em;
+}
+
+.box h3 {
+  margin:0;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: white;
+  background:black;
+  padding: 10px;
+}
+
+.box-label {
+  background-color: #99ccee;
+  text-align: center;
+  margin-top: 0;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1400px) {
+  #css-image {
+    height: 200px;
+    width: 200px;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  #css-image {
+    height: 150px;
+    width: 150px;
+  }
+
+  #side-text {
+    font-size: 16px;
+  }
+
+  #banner-text {
+    font-size: 24px;
+  }
+
+  .container {
+    height: auto;
+  }
+
+  header a {
+    font-size: 20px;
+  }
+
+  #module-blocks {
+    margin-top: 24px;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+
+  header li:not(:first-child) {
+    display: none;
+  }
+
+  header a {
+    font-size: 20px;
+  }
+
+  #banner-text {
+    font-size: 20px;
+  }
+
+  .container {
+    height: auto;
+  }
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 900px) {
+
+} 
+
