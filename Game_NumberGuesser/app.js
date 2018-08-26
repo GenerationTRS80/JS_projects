@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 /*
 GAME FUNCTION:
 - Player must guess number between min and max

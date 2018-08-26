@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // alert(1);
 // Event Listner
 document.getElementById('loan-form').addEventListener('submit',function(e){
