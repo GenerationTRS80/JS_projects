@@ -47,8 +47,16 @@ h1 {
 .section h3 {
   font-size: 2rem;
   color: blueviolet;
+  font-weight: 100;
 }
 
+section#entertainment {
+  background: url(../img/section-bg.jpg) no-repeat bottom/cover;
+  padding: 10rem 0;
+}
+
+
+/**** Showcase *****/
 #showcase {
   color: red;
   margin:0;
@@ -122,6 +130,15 @@ h1 {
   color: var(--secondary-color);
 }
 
+.text-light {
+  color:var(--light-color);
+}
+
+.bg-light {
+  background: var(--light-color);
+  color: #333;
+}
+
 .mt {
   margin-top: 1rem;
 }
@@ -140,13 +157,15 @@ nav {
   position: fixed;
   top:0;
 }
+
 nav ul {
   padding: 0;
   margin: 0;
 }
+
 nav li {
   display: inline;
-  float: left;
+  /* float: left; */
 }
 nav a {
   display: inline-block;
