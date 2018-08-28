@@ -91,6 +91,7 @@ section#entertainment {
 }
 
 /* Utility Classes */
+
 .container {
   max-width: 1180px;
   text-align: center;
@@ -100,6 +101,46 @@ section#entertainment {
 
 .lead {
   font-size: 1.3rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  color: var(--light-color);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+footer ul{
+  list-style: none;
+}
+
+footer .footer-cols {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  text-align: left;
+  font-size: 14px;
+}
+
+.footer-cols span {
+  font-size: 18px;
+  color: var(--primary-bkcolor-hover);
+}
+
+.footer-cols ul li:first-child {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: var(--primary-bkcolor-hover) solid 3px;
+}
+
+.footer-bottom {
+  background: #333;
+  padding: 1rem;
 }
 
 /* Button */
