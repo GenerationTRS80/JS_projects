@@ -1,0 +1,12 @@
+#canvas {
+
+  margin: auto;
+  /* light grey */
+  background: #ececec;
+  width: 100%;
+}
+
+.btn-disabled{
+  /* Color always be white */
+  color: #fff !Important;
+}

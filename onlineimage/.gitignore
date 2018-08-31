@@ -1,0 +1,5 @@
+# git ignore list config and exeg
+*.exe
+/config
+config.*
+settings.json
