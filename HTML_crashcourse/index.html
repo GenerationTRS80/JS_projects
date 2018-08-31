@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Beginning HTML</title>
+</head>
+<body>
+
+	<a href="blog.html">Goto Blog</a>
+
+	<h1>Heading One</h1>
+	<h2>Heading Two</h2>
+	<h3>Heading Three</h3>
+	<h4>Heading Four</h4>
+	<h5>Heading Five</h5>
+	<h6>Heading Six</h6>
+
+	<p>Lorem ipsum dolor sit amet, <em> consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </em>,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. <strong> Duis aute irure dolor in reprehenderit in voluptate velit esse </strong>
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <a href="http://google.com" target="_blank">sed do eiusmod</a> 
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	<!-- *** List  *** -->
+		<ul>
+			<li>List Item 1</li>
+			<li>List Item 2</li>
+			<li>List Item 3</li>
+			<li>List Item 4</li>
+		</ul>
+
+		<ol>
+			<li>List Item 1</li>
+			<li>List Item 2</li>
+			<li>List Item 3</li>
+			<li>List Item 4</li>
+		</ol>
+
+		<!-- Table -->
+		<!-- NOTE: Use tables for tabular data only -->
+		<table>
+			<!-- heading -->
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Age</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Phil LastName</td>
+					<td>phil@something.com</td>
+					<td>35</td>
+				</tr>
+				<tr>
+					<td>John Doe</td>
+					<td>john@something.com</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>Sara Williams</td>
+					<td>sare@something.com</td>
+					<td>35</td>
+				</tr>
+			</tbody>			
+		</table>
+
+		<br>
+
+		<!-- Form -->
+		<form action="process.php" method="POST">
+			<div>
+				<label>First Name</label>
+				<input type="text" name="firstName" placeholder="Enter first name">
+			</div>
+			<br>
+			<div>
+				<label>Last Name</label>
+				<input type="text" name="lastName">
+			</div>
+			<br>
+			<div>
+				<label>Email<label>
+				<input type="email" name="email">
+			</div>
+			<br>
+			<div>
+				<label>Message</label>
+				<!-- Note: name attribute is used for server side connectivity -->
+				<textarea name="message"></textarea>
+			</div>
+			<br>
+			<div>
+				<label>Select Gender</label>
+				<select name="gender">
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+			<br>
+			<div>
+				<label>Age</label>
+				<input type="number" name="age">
+			</div>
+			<br>
+			<div>
+				<label>Birthday</label>
+				<input type="date" name="birthday">
+			</div>
+
+			<!-- Button -->
+			<br>
+			<input type="submit" name="submit">
+		</form>
+
+		<!-- Button tag -->
+		<br>
+		<button click="somefunction">Click Me</button>
+
+
+		<!-- Image -->
+		<!-- Wrap a link around -->
+		<br>
+		<a href="#">
+			<img src="img/siskogiants.jpg" alt="My sample Image" width="200px" height="200px">
+		</a>
+
+		<!-- Quotation -->
+		<blockquote cite="www.gentrs80example.com" style="width:400px">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</blockquote>
+
+		<p>The <abbr title="World Wide Web">WWW</abbr> is awesome!</p>
+
+		<p><cite>HTML Crash course</cite> by Brad Traversy</p>
+
+		<div style="margin-top:500px"></div>
+
+</body>
+</html> 
