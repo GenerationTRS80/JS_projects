@@ -1,0 +1,280 @@
+html {
+	font-family: Arial, Helvetica, San-Serif;
+	/* Grey rgb(100,100,100) Blue rgb(0,0,255)
+	bright green #00ff40*/
+	background-color: rgb(123,115,100);
+}
+
+/* Set global padding and margin to 0 */
+
+/*
+	* {
+		margin: 0;
+		padding: 0;
+	}
+*/
+
+
+/* Set Variables */
+:root {
+
+	--light-grey: rgb(100,100,100);
+	--border-green:#00ff40;
+
+}
+
+body {
+	font-size: 16px;
+	font-weight: none;
+	font: normal Arial, Helvetica, San-Serif;
+	line-height: 1.2em;
+	margin: 0;
+}
+
+
+a {
+	/* Get rid of underline for the link*/
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	background-color: yellow;
+	color: red;
+}
+
+
+/*Clear floats*/
+
+.clr {
+	clear: both;
+}
+
+/*a:active {
+
+	background-color: var(--light-grey);
+
+}
+
+a:visited {
+
+	background-color: var(--border-green);
+}*/
+
+.box-1 {
+	/* #333 dark grey*/
+	background-color: #333;
+	/* #fff white */
+	color: #fff;
+
+}
+
+
+/* Format any h1 within the .box-1 class */
+.box-1 h1 {
+
+	font-family: tahoma;
+	font-weight: normal;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: uppercase;
+	letter-spacing: 0.4em;
+
+}
+
+.box-1 p{
+	word-spacing: 1em;
+}
+
+.box-2 {
+
+	border: 3px dotted #ccc;
+	padding: 20px;
+	margin: 20px 0;
+
+}
+
+.categories {
+
+	border: 1px #ccc solid;
+	padding: 10px;
+	border-radius: 15px;
+}
+
+.categories h2{
+	border: 1px var(--border-green) solid;
+	padding: 0;
+	margin-bottom: 0px;
+	text-align: center:;
+}
+
+.categories ul {
+	border: 1px var(--border-green) solid;
+	padding-top; 0;
+	padding-left: 10px;
+	list-style: square;
+}
+
+.categories li {
+	padding-bottom: 6px;
+	border-bottom: 3px #333 dotted;
+	list-style: none;
+	/*list-style-image: url(../img/checkblue.png);*/
+}
+
+
+.categories li:before {
+
+  content: '';
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-size: 10px;
+  background-image: url(../img/checkblue.png);
+  background-repeat: no-repeat;
+  margin-right: 5px;
+
+}
+
+.container {
+	/* Containers you want to push to the center
+		 Use margin: auto to center; */
+	margin: auto;
+	/* Use % to make website responsive
+	 to change margin to change in screen size*/
+	width: 80%;
+
+	/* Border */
+	/*	border-style: solid;
+	border-color: rgb(0,0,255);
+	border-width: 5px 10px 15px 20px;
+
+	border-bottom-width: 30px;
+
+	border: red solid 10px;*/
+
+	/* Padding */
+	padding: 50px 25px 15px 4px;
+
+}
+
+.button {
+	background-color: #333;
+	color: #fff;
+	font-weight: none;
+	font-size: 12px;
+	padding: 10px 15px;
+	border: none;
+}
+
+.button:hover {
+	background-color: yellow;
+	color: red;
+}
+
+
+.my-form{
+	padding: 20px;
+}
+
+.my-form .form-group{
+	padding-bottom: 15px;
+}
+
+.my-form label {
+	/* Set as block element so to go across the page 
+		and set a new line*/
+	display: block;
+	padding-bottom: 6px;
+}
+
+/* Format input only with text type ie not button
+		with submit type*/
+.my-form input[type="text"], .my-form textarea {
+	padding: 8px;
+	width: 100%;
+}
+
+.block {
+	float: left;
+	width: 33.3%;
+	border: 1px solid black;
+	padding: 10px;
+	/*Takes into acount the width of the padding and border
+		when calculating size
+		NOTE: so the width with border box will be 33.3% no matter 
+		the border thickenss or padding*/
+	box-sizing: border-box;
+}
+
+/*.my-form input[type="submit"] {
+	background-color: #333;
+	color: #fff;
+	padding: 10px 15px;
+	border: none;
+}
+*/
+  
+
+/* NOTE: use border-box to make the sidebar fit and aling*/
+#main-block {
+	float: left;
+	width: 70%;
+	box-sizing: border-box;	
+	padding: 15px;
+}
+
+#sidebar {
+	float: right;
+	width: 30%;
+	background-color: var(--light-grey);
+	color: #fff;
+	box-sizing: border-box;
+	padding: 15px;
+
+}
+
+.p-box {
+	width: 800px;
+	height: 500px;
+	border: 1px solid black;
+	margin-top: 30px;
+	position: relative;
+	background-image: url(../img/abstractlight.jpg);
+	background-repeat: no-repeat;
+	background-position: 100px 200px;
+	background-position: center center;
+}
+
+.p-box h1{
+	position: absolute;
+	top:40px;
+	left: 200px;
+}
+
+.p-box h2 {
+	position: absolute;
+	bottom: 40px;
+	right: 100px;
+}
+
+.fix-me {
+	position: fixed;
+	top: 400px;
+}
+
+.my-list li:first-child{
+	background: red;
+}
+
+.my-list li:last-child{
+	background: blue;
+}
+
+.my-list li:nth-child(5){
+	background: green;
+}
+
+/*.my-list li:nth-child(odd){
+	background: var(--light-grey);
+}*/

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="css/Form-01.css">
+
+<title>Transition Button</title>
+
+</head>
+<body>
+
+  <form action="" class="form">
+    <h3 id="reg">Register</h3>
+    <label for="">Enter Name</label>
+    <input type="text">
+
+    <label for="">Enter Email</label>
+    <input type="text">
+
+    <label for="">Enter Course</label>
+    <input type="text">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <input type="submit" value="Submit" id="Button">
+
+    <div id="demoButton" class="default">
+      Submit!
+    </div>
+
+  </form>
+
+<script src="Scripts/jquery-1.9.0.min.js"></script>
+<script
+  src="https://code.jquery.com/jquery-1.9.1.min.js"
+  integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+  crossorigin="anonymous"></script>
+<script>
+  
+  $(function(){
+    $('#demoButton').mousedown(function(){
+      $(this).removeClass('default');
+      $(this).addClass('shrink');
+    })
+
+    $('#demoButton').mouseup(function(){
+      $(this).removeClass('shrink');
+      $(this).addClass('default');
+    })
+
+  });
+
+  // document.getElementById("button").addEventListener('click', function addClass(){
+  //       console.log('This is a test');
+  //   })
+    
+    </script>
+</body>
+</html>
