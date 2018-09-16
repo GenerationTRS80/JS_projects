@@ -52,7 +52,6 @@ body {
 .content .logo {
   height: 50%;
   width: 50%;
-
 }
 
 .content .title {
@@ -63,4 +62,49 @@ body {
 .content .text {
   line-height: 1.7;
   margin-top: 1rem;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 4rem 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-gap:20px;
+  /* Make sure it is even percent divided use fractionals */
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+  display: grid;
+  grid-gap:20px;
+  /* Make sure it is even percent divided use fractionals */
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.center {
+  text-align: center;
+  margin: auto;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #f4f4f4; 
+}
+
+footer {
+  padding: 1.2rem;
+}
+
+footer p {
+  margin: 0;
+  font-weight: 600;
 }
