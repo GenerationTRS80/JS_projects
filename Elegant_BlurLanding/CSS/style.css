@@ -109,3 +109,74 @@ footer p {
   font-weight: 600;
 }
 
+/* Media Queries Small Screens */
+
+/* Portrait mode */
+@media screen and (max-width:560px){
+
+  .showcase::after {
+    height: 50vh;
+  }
+
+  .content {
+    top: 5%;
+    margin-top: 45px;
+    margin-left: -77px;
+    width: 320px;
+    height: 150px;
+  }
+
+  .content .title {
+    font-size: 1.5rem;
+    margin-top: 0.6rem;
+  }
+  
+  .content .text {
+    display: none;
+  }
+
+  .content .logo {
+    height: 80px;
+    width: 120px;
+  }
+
+  .grid-3 {
+    margin-top: 2rem;
+    width: 275px;
+    display: grid;
+    grid-gap:1px;
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2 {
+    /* text-align: center; */
+    padding: 1rem 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  .services h3 {
+    text-align: left;
+    padding: 0rem;
+    /* margin-bottom: 0.2rem; */
+  }
+
+  .services div {
+    text-align: left;
+    border-bottom: #333 dashed 6px;
+    padding: 1.5rem 0rem;
+  }
+
+  /* Add dashed border top services */
+  .services .container:first-child {
+    border-top: #333 dashed 6px;
+    padding-top: 0rem;
+  }
+
+  /* Remove duplicate dashed border bottom */
+  .services .container  {
+    border-bottom: none;
+  }
+  
+}
+
+
