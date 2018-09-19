@@ -179,4 +179,24 @@ footer p {
   
 }
 
+/* Landscape MOde */
+
+@media screen and (max-height: 500px){
+
+  /* .content .title, */
+  .content .text {
+
+    display: none;
+    /* top: 5%; */
+  }
+
+  .content {
+
+    margin-top: 45px;
+    margin-left: -130px;
+    width: 600px;
+  }
+
+}
+
 
