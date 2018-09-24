@@ -1,5 +1,5 @@
 # JS Projects
-This contains projects using Javascript
+This contains projects using Javascript or related to creating a website such as: css,sass and html
 
 The projects list:
 Dom Crashcourse
