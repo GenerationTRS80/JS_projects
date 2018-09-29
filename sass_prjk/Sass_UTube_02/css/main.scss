@@ -12,9 +12,10 @@ $varPadding: 15px;
 $varBorders: 15px;
 
 // Screen to change to desktop view from hand held view
-$varDesktop: 840px;
+$varDesktop: 920px;
 
 @mixin desktop {
+  // Paas the variable $varDesktop to the Media query by using #{} around $varDesktop
   @media Screen and (min-width: #{$varDesktop}){
     @content;
   }
@@ -132,6 +133,7 @@ main {
       font-size: 1.4em;
     }
 
+    // Button
     a {
       color: fnColor(primary-dark);
       border-radius: $varBorders;
@@ -142,10 +144,11 @@ main {
       text-align: center;
       margin: 50px auto 0 auto;
       display: block;
-      padding: 20px;
+      padding: $varPadding;
 
       @include desktop{
         display: inline-block;
+        // Make the padding on the left and right side 4 times wider that top and bottom
         padding: $varPadding $varPadding*4;
       }
 

@@ -17,7 +17,7 @@ body #bg {
   z-index: -1;
 }
 
-@media Screen and (min-width: 840px) {
+@media Screen and (min-width: 920px) {
   body #bg {
     -webkit-clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
             clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
@@ -33,7 +33,7 @@ body header a {
           text-decoration: uppercase;
 }
 
-@media Screen and (min-width: 840px) {
+@media Screen and (min-width: 920px) {
   main {
     display: -ms-grid;
     display: grid;
@@ -53,7 +53,7 @@ main section#card {
   width: 80%;
 }
 
-@media Screen and (min-width: 840px) {
+@media Screen and (min-width: 920px) {
   main section#card {
     grid-area: card;
     height: -webkit-fit-content;
@@ -97,7 +97,7 @@ main section#primary {
   text-align: center;
 }
 
-@media Screen and (min-width: 840px) {
+@media Screen and (min-width: 920px) {
   main section#primary {
     grid-area: primary;
     text-align: left;
@@ -111,7 +111,7 @@ main section#primary h1 {
   text-transform: uppercase;
 }
 
-@media Screen and (min-width: 840px) {
+@media Screen and (min-width: 920px) {
   main section#primary h1 {
     width: 30%;
     font-size: 4em;
@@ -133,10 +133,10 @@ main section#primary a {
   text-align: center;
   margin: 50px auto 0 auto;
   display: block;
-  padding: 20px;
+  padding: 15px;
 }
 
-@media Screen and (min-width: 840px) {
+@media Screen and (min-width: 920px) {
   main section#primary a {
     display: inline-block;
     padding: 15px 60px;
