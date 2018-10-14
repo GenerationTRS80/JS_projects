@@ -38,6 +38,13 @@ const options = {
       "Dallas",
       "San Jose"
     ]
+  },
+
+  // Flip the chart sideways
+  plotOptions: {
+    bar: {
+      horizontal: true
+    }
   }
 };
 
