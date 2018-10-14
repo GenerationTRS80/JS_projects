@@ -42,10 +42,10 @@ const options = {
 };
 
 
-// Init Chart 
-// Note you can get Element by ID
-// const chart = new ApexChart(document.getElementById('chart'),options);
-const chart = new ApexChart(document.querySelector("#chart"),options);
+// Init Chart  ApetChart ((s)) plural
+// NOTE: you can get Element by ID
+const chart = new ApexCharts(document.getElementById('chart'),options);
+// const chart = new ApexCharts(document.querySelector("#chart"),options);
 
 // Render Chart
 chart.render();
