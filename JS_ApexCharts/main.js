@@ -63,7 +63,6 @@ const options = {
   }
 };
 
-
 // Init Chart  ApetChart ((s)) plural
 // NOTE: you can get Element by ID
 const chart = new ApexCharts(document.getElementById('chart'),options);
@@ -71,3 +70,67 @@ const chart = new ApexCharts(document.getElementById('chart'),options);
 
 // Render Chart
 chart.render();
+
+// Event Method Example
+
+// 1) Get title/description of Button
+const name = document.getElementById('btnHorizontal');
+
+// NOTE: Contcatenate using (( + ))
+// console.log('Button Title' + name.innerHTML);
+// console.log(name);
+
+// 2) Update chart to horizontal on button click
+
+let btnHorVer=true;
+document.getElementById('btnHorizontal').addEventListener('click', chartHorizontal());
+
+// Below is a test function
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+
+
+function chartHorizontal(){
+
+  
+  
+  if (btnHorVer==true) {
+    // displayDate();
+    console.log('True');
+    let btnHorVer = false;
+
+    chart.updateOptions(
+      {
+        plotOptions: {
+          bar: {
+            horizontal: true
+          }
+        }
+      }
+    );
+  }
+  else {
+    console.log('false');
+    let btnHorVer = true;
+
+    chart.updateOptions(
+      {
+        plotOptions: {
+          bar: {
+            horizontal: false
+          }
+        }
+      }
+    );
+  }
+  
+
+}
+
+
+
+
+
+
