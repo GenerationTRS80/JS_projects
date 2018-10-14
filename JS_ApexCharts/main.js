@@ -40,11 +40,26 @@ const options = {
     ]
   },
 
-  // Flip the chart sideways
+  // Flip the chart sideways = true
   plotOptions: {
     bar: {
-      horizontal: true
+      horizontal: false
     }
+  },
+  fill: {
+    colors: ['#f44336']
+  },
+
+  // TITLE of chart
+  title: {
+    text: 'Largest City by Population',
+    align: 'center',
+    margin: 20,
+    offsetY: 20,
+    style: {
+      fontSize: '25px'
+    }
+
   }
 };
 
