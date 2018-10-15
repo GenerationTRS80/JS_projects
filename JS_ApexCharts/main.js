@@ -82,24 +82,24 @@ const name = document.getElementById('btnHorizontal');
 
 // 2) Update chart to horizontal on button click
 
-let btnHorVer=true;
-document.getElementById('btnHorizontal').addEventListener('click', chartHorizontal());
+
+
+document.getElementById('btnHorizontal').addEventListener('click', chartHorizontal);
 
 // Below is a test function
 function displayDate() {
   document.getElementById("demo").innerHTML = Date();
 }
 
-
+let btnHorVer = true;
 
 function chartHorizontal(){
 
-  
-  
+
   if (btnHorVer==true) {
     // displayDate();
     console.log('True');
-    let btnHorVer = false;
+    btnHorVer = false;
 
     chart.updateOptions(
       {
@@ -113,7 +113,7 @@ function chartHorizontal(){
   }
   else {
     console.log('false');
-    let btnHorVer = true;
+    btnHorVer = true;
 
     chart.updateOptions(
       {
