@@ -1,0 +1,15 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 2em;
+  font-size: 2em;
+}
+
+input {
+  width: 80%;
+  font-size: 1.4em;
+}
+
+button {
+  font-size: 2em;
+}
