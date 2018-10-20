@@ -1,15 +1,51 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  padding: 2em;
-  font-size: 2em;
-}
-
-input {
-  width: 80%;
+  padding: 1.4em;
   font-size: 1.4em;
 }
 
+input {
+  width: 60%;
+  font-size: 1em;
+}
+
 button {
-  font-size: 2em;
+  font-size: 1em;
+}
+
+.msg {
+  padding: 0.6em;
+  margin: 0.6em 0;
+  background-color: #fffde3;
+  width: 30%;
+  /* color: brown; */
+  font-weight: 300;
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+}
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:not */
+
+/* body :not(p) {
+  color: red;
+  border: 3px solid blue;
+} */
+
+/* input:placeholder-shown {
+  border: 15px solid green;
+}
+
+input::-ms-input-placeholder {
+  border: 15px solid yellowgreen;
+}
+
+
+input::-webkit-input-placeholder-shown {
+  border: 15px solid purple;
+} */
+
+/* Where text is entered in the input then show a warning/success text */
+input:not(:placeholder-shown) + .msg {
+  opacity: 1;
 }
