@@ -1,7 +1,7 @@
-body, html {
   /* Remove scroll bars by setting to 100% height */
-  height: 100%;
   /* Remove default padding in body section */
+body, html {
+  height: 100%;
   margin: 0;
 }
 
@@ -13,17 +13,17 @@ body {
 }
 
 .bg .bg2 {
-  height: 100%;
   width: 100%;
+  height: 100%;
   position: absolute;
 }
 
 .bg {
+  z-index: -1;
+  background-color: #226dbc;
   -webkit-clip-path: polygon(72% 74%, 100% 27%, 100% 100%, 5% 100%);
   clip-path: polygon(72% 74%, 100% 27%, 100% 100%, 5% 100%);
   font-family: 'Montserrat', sans-serif;
-  z-index: -1;
-  background-color: #226dbc;
 }
 
 .bg2 {
@@ -32,4 +32,46 @@ body {
   -webkit-clip-path: polygon(63% 69%, 100% 9%, 100% 100%, 5% 100%);
   clip-path: polygon(63% 69%, 100% 9%, 100% 100%, 5% 100%);
   background-color:#2a5f98;
+}
+
+.container {
+  grid: auto;
+  grid-template-columns: 50% auto;
+  height: auto;
+  align-self: center;
+  margin: 0 5px;
+}
+
+/* Perspective property put a prespective any child elements in that property */
+ul {
+  list-style-type: none;
+  perspective: 1000px;
+}
+
+ul li {
+  display: grid;
+  grid-template-columns: 20% auto;
+  border-radius: 20%;
+  padding: 15px;
+  cursor: pointer;
+  transform: rotateY(30deg) rotateX(15deg);
+  position: absolute;
+  border-bottom: 5px solid rgba(0,0,0,0.2);
+  
+}
+
+ul li:nth-child(1) {
+  background: #bfe8fc;
+  top: -105px;
+  z-index: 2;
+}
+
+ul li:nth-child(2) {
+  background: #faffc8;
+  z-index: 1;
+}
+
+ul li:nth-child(3) {
+  background: rgb(242,228,255);
+  top: 105px;
 }
