@@ -95,29 +95,38 @@ if x is y:
 
 people3 = ['John','Paul', 'Sara','Susan']
 
-'''
+
 # Simple for loop
+'''
 for person in people3:
   print(f'Current Person: {person}')
-
+'''
 
 # Break out of loop
+'''
 for person in people3:
   if person == 'Sara':
     break
   print(f'Current Person: {person}')
-
+'''
 # Continue (Skip)
+'''
 for person in people3:
   if person == 'Sara':
     continue
   print(f'Current Person: {person}')
 '''
-'''
 #range
-for i in range(len(people3)):
-  print(people3[i])
 '''
+for i in range(len(people3)):
+  print(people3[i]) 
 
 for i in range(0, 11):
   print(f'Number: {i}')
+'''
+#While Loops execute a set of statements
+
+count = 0
+while count <= 10:
+  print(f'Count: {count}')
+  count += 1
