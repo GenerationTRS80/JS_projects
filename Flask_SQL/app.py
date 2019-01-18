@@ -42,7 +42,7 @@ class ProductSchema(ma.Schema):
     fields=('id','ProductName','ProductDesc','ProdPrice','ProdQty')
 
 #Init schema (product update single, products update many)
-product_schema=ProductSchema(strict=True)
+product_schema = ProductSchema(strict=True)
 products_schema = ProductSchema(many=True, strict=True)
 
 # Create a Product (Don't use : at end of route)
@@ -52,7 +52,7 @@ def add_product():
   ProductName = request.json['ProductName']
   ProductDesc = request.json['ProductDesc']
   ProdPrice = request.json['ProdPrice']
-  ProdQty = request.json['ProdQty']
+  ProdQty = request.json['ProdQty'] 
   
   #Instantiate new objects
   new_product = Product(ProductName, ProductDesc, ProdPrice, ProdQty)
@@ -63,6 +63,15 @@ def add_product():
   db.session.commit()
 
   return product_schema.jsonify(new_product)
+
+  #Get all products
+  @app.route('/product', methods=['GET'])
+  def get_products():
+    all_products = Product.query.all()
+    result = products_schema.dump(all_products)
+    return jsonify(result.data)
+
+
 
 
 # @app.route('/', methods=['GET'])
