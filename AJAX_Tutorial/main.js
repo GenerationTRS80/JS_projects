@@ -1,21 +1,27 @@
 // Create listener
 var btn = document.getElementById("btn");
 var animalContainer = document.getElementById("animal-info");
-var stringURL = 'https://learnwebcode.github.io/json-example/animals-1.json';
+
+//'https://learnwebcode.github.io/json-example/animals-1.json';
+var stringURL = 'https://learnwebcode.github.io/json-example/animals-';
+var pageCounter = 1;
 
 
 
 btn.addEventListener("click", function () {
-  // Mke HttpRequest
+  // Make request
   var newRequest = new XMLHttpRequest();
+  var strTemp = '';
 
-  console.log(stringURL);
+  strTemp = stringURL + pageCounter + '.json';
+  console.log(strTemp);
 
   // Get JSON then render it
-  getJSON(newRequest, stringURL);
+  getJSON(newRequest, strTemp);
 
   newRequest.send();
 
+  pageCounter++;
 });
 
 //Create Asynchronous JavaScript and XML (now JASON)
@@ -41,8 +47,12 @@ function getJSON(ourRequest, strUrl) {
 function renderHTML(data) {
 
   // Insert HTML into div
-  var htmlString = "This is a test";
+  var htmlString = "";
   console.log(htmlString);
+
+  for (i = 0; i < data.length; i++) {
+    htmlString += "<p>" + data[i].name + " is a " + data[i].species + ".</p>";
+  }
 
   animalContainer.insertAdjacentHTML("beforeend", htmlString);
 
