@@ -7,14 +7,14 @@ var stringURL = 'https://learnwebcode.github.io/json-example/animals-';
 var pageCounter = 1;
 
 
-
+// Main
 btn.addEventListener("click", function () {
   // Make request
   var newRequest = new XMLHttpRequest();
   var strTemp = '';
 
   strTemp = stringURL + pageCounter + '.json';
-  console.log(strTemp);
+  //console.log(strTemp);
 
   // Get JSON then render it
   getJSON(newRequest, strTemp);
@@ -22,7 +22,16 @@ btn.addEventListener("click", function () {
   newRequest.send();
 
   pageCounter++;
+
+  console.log('Page Counter ' + pageCounter);
+
+  if (pageCounter > 3) {
+    btn.classList.add("hide-me");
+  }
+
 });
+
+// >>> Subroutines <<
 
 //Create Asynchronous JavaScript and XML (now JASON)
 function getJSON(ourRequest, strUrl) {
@@ -43,18 +52,16 @@ function getJSON(ourRequest, strUrl) {
 
 }
 
-
+// Sub Render HTML
 function renderHTML(data) {
 
   // Insert HTML into div
   var htmlString = "";
-  console.log(htmlString);
 
   for (i = 0; i < data.length; i++) {
     htmlString += "<p>" + data[i].name + " is a " + data[i].species + ".</p>";
   }
 
   animalContainer.insertAdjacentHTML("beforeend", htmlString);
-
 
 }
