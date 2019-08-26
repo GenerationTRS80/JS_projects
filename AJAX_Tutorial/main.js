@@ -36,22 +36,24 @@ btn.addEventListener("click", function () {
 //Create Asynchronous JavaScript and XML (now JASON)
 function getJSON(ourRequest, strUrl) {
 
-
   // Get HttpRequest and then load
   ourRequest.open('GET', strUrl);
 
   //Load response
   ourRequest.onload = function () {
 
-    // Use JSON parser
-    var ourData = JSON.parse(ourRequest.responseText);
+    // Check for connection problems
+    if (ourRequest.status >= 200 && ourRequest.status < 400) {
 
-    // Show name of pet
-    //console.log(ourData[0].name);
+      // Use JSON parser
+      var ourData = JSON.parse(ourRequest.responseText);
+      renderHTML(ourData);
+    } else {
 
-    renderHTML(ourData);
+      console.log("Not connected to the server");
+    }
+
   };
-
 
 }
 
