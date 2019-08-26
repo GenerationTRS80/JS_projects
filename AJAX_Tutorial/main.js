@@ -23,7 +23,7 @@ btn.addEventListener("click", function () {
 
   pageCounter++;
 
-  console.log('Page Counter ' + pageCounter);
+  //console.log('Page Counter ' + pageCounter);
 
   if (pageCounter > 3) {
     btn.classList.add("hide-me");
@@ -36,7 +36,6 @@ btn.addEventListener("click", function () {
 //Create Asynchronous JavaScript and XML (now JASON)
 function getJSON(ourRequest, strUrl) {
 
-  console.log(strUrl);
 
   // Get HttpRequest and then load
   ourRequest.open('GET', strUrl);
@@ -46,9 +45,13 @@ function getJSON(ourRequest, strUrl) {
 
     // Use JSON parser
     var ourData = JSON.parse(ourRequest.responseText);
-    console.log(ourData[0].name);
+
+    // Show name of pet
+    //console.log(ourData[0].name);
+
     renderHTML(ourData);
   };
+
 
 }
 
@@ -58,10 +61,43 @@ function renderHTML(data) {
   // Insert HTML into div
   var htmlString = "";
 
+  // List species
   for (i = 0; i < data.length; i++) {
-    htmlString += "<p>" + data[i].name + " is a " + data[i].species + ".</p>";
+
+    htmlString += "<p>" + data[i].name + " is a " + data[i].species + ". That likes to eat";
+
+    // List food likes`
+    for (ii = 0; ii < data[i].foods.likes.length; ii++) {
+
+      // IF there are 2 items or more and the word "and"
+      if (ii == 0) {
+
+        htmlString += " " + data[i].foods.likes[ii];
+      } else {
+
+        htmlString += " and " + data[i].foods.likes[ii];
+      }
+
+    }
+
+    htmlString += ' and dislikes ';
+
+    // List disliked foods
+    for (ii = 0; ii < data[i].foods.dislikes.length; ii++) {
+
+      // IF there are 2 items or more and the word "and"
+      if (ii == 0) {
+
+        htmlString += " " + data[i].foods.dislikes[ii];
+      } else {
+
+        htmlString += " and " + data[i].foods.dislikes[ii];
+      }
+
+    }
+
+    htmlString += ".</p>";
   }
 
   animalContainer.insertAdjacentHTML("beforeend", htmlString);
-
 }
