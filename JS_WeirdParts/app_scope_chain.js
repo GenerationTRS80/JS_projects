@@ -3,11 +3,13 @@
     -- Chain is the link to the out lexical environments
 */
 
-function b() {
-  console.log(myVar);
-}
-
+// a() is the outer lexical environment of b()
 function a() {
+
+  function b() {
+    console.log(myVar);
+  }
+
   var myVar = 2;
   b();
 }
