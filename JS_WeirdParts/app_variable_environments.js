@@ -4,11 +4,13 @@
 
 */
 
+// execution context for function b
 function b() {
   var myVar;
   console.log(myVar);
 }
 
+// execution context for function a
 function a() {
   var myVar = 2;
   console.log(myVar);
