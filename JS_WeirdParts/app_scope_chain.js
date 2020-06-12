@@ -10,10 +10,11 @@ function a() {
     console.log(myVar);
   }
 
-  var myVar = 2;
+  // var myVar = 2;
   b();
 }
 
 // This code is running within the Global Execution context
 var myVar = 1;
 a();
+// b();
