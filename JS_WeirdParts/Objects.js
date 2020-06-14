@@ -2,7 +2,7 @@
 // Objects can have properties and methods
 // Methods are functions
 
-var person = new Object();
+var person = new Object {};
 //var person = {};
 
 // Add properties
