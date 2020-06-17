@@ -15,10 +15,11 @@ function Person(firstname, lastname) {
 }
 
 
-// Add method 
+// Add method to prototype
+// It is more efficient to put the method on the prototype because it only gets invoked when the new keyword instantiates the object
 Person.prototype.getFullName = function () {
   return this.firstname + ' ' + this.lastname;
-}
+};
 
 var john = new Person('John', 'Doe');
 console.log(john);
@@ -27,7 +28,7 @@ console.log(john);
 var jane = new Person('Jane', 'Doe');
 
 Person.prototype.getFormalFullName = function () {
-  return this.lastname + ' ' + this.firstname;
-}
+  return this.lastname + ', ' + this.firstname;
+};
 
 console.log(john.getFormalFullName());
