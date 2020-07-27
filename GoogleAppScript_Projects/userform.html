@@ -33,7 +33,7 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="">
+  <script>
     var nameBox = document.getElementById("user_name");
     var phoneBox = document.getElementById("tele");
 
@@ -41,8 +41,17 @@
     document.getElementById("btn").addEventListener("click", addRecord);
 
     function addRecord() {
+      //Create an object data that you will use to return to a spreadsheet 
+      var data = {
+        name: nameBox.value,
+        phone: phoneBox.value
+      };
 
-    };
+      google.script.run.appendData(data);
+      nameBox.value = "";
+      phoneBox.value = "";
+
+    }
   </script>
 
 </body>
