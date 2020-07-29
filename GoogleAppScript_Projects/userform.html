@@ -41,17 +41,26 @@
     document.getElementById("btn").addEventListener("click", addRecord);
 
     function addRecord() {
-      //Create an object data that you will use to return to a spreadsheet 
+
+      //Create an object data that you will use to return a value to the spreadsheet
       var data = {
         name: nameBox.value,
         phone: phoneBox.value
       };
 
-      google.script.run.appendData(data);
-      nameBox.value = "";
-      phoneBox.value = "";
+      // If nothing is entered for either name or phone number then stop function and throw an error
+      if (name.length == 0 || phone.length == 0) {
 
-    }
+        // Run the function from the server side
+        google.script.run.errorMsg();
+      } else {
+
+        google.script.run.appendData(data);
+        //Once data is added then clear the entry boxes
+        nameBox.value = "";
+        phoneBox.value = "";
+      } // Close else
+    } // Close add records
   </script>
 
 </body>
